@@ -156,7 +156,7 @@ export default function JobFeed({ initialJobs, demo = false }: { initialJobs: Jo
           <label className="flex items-center gap-2 text-sm">
             <span className="text-muted">Score from</span>
             <input type="range" min={0} max={100} step={5} value={filters.minScore}
-              onChange={(e) => set("minScore", Number(e.target.value))} className="w-24 accent-[var(--accent)]" />
+              onChange={(e) => set("minScore", Number(e.target.value))} className="w-20 accent-[var(--accent)] sm:w-24" />
             <span className="w-7 font-semibold">{filters.minScore}</span>
           </label>
           <select value={filters.sort} onChange={(e) => set("sort", e.target.value as Filters["sort"])}
@@ -167,7 +167,7 @@ export default function JobFeed({ initialJobs, demo = false }: { initialJobs: Jo
         </div>
         <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
           <select value={filters.category} onChange={(e) => set("category", e.target.value)}
-            className="rounded-lg border border-border bg-bg px-2 py-1">
+            className="max-w-full rounded-lg border border-border bg-bg px-2 py-1">
             <option value="">All categories</option>
             {categories.map((c) => <option key={c} value={c}>{c}</option>)}
           </select>
@@ -238,7 +238,7 @@ export default function JobFeed({ initialJobs, demo = false }: { initialJobs: Jo
                 </div>
               </div>
 
-              <div className="flex gap-1 px-3 pb-3 sm:hidden">
+              <div className="flex flex-wrap gap-1 px-3 pb-3 sm:hidden">
                 <Actions job={job} onAct={act} onAskReason={() => setAskReason(askReason === job.id ? null : job.id)} />
               </div>
 

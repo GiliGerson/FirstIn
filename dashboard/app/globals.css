@@ -57,6 +57,7 @@
 body {
   background: var(--bg);
   color: var(--text);
+  overflow-x: hidden;   /* never scroll sideways on phones */
 }
 
 /* Isolated left-to-right runs (numbers, codes) */

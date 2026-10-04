@@ -12,7 +12,7 @@ const LINKS = [
 export default function Nav() {
   const pathname = usePathname();
   return (
-    <nav className="flex gap-1 overflow-x-auto">
+    <nav className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
       {LINKS.map(({ href, label }) => {
         const active = href === "/dashboard" ? pathname === "/dashboard" : pathname.startsWith(href);
         return (

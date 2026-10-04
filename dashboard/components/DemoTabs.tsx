@@ -12,7 +12,7 @@ const TABS = [
 export default function DemoTabs() {
   const pathname = usePathname();
   return (
-    <nav className="flex gap-1 overflow-x-auto">
+    <nav className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
       {TABS.map(({ href, label }) => (
         <Link key={href} href={href}
           className={`whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-medium transition ${

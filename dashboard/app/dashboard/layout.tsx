@@ -16,13 +16,13 @@ export default async function DashboardLayout({ children }: LayoutProps<"/dashbo
   return (
     <div className="min-h-screen">
       <header className="sticky top-0 z-20 border-b border-border bg-surface/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
-          <span className="flex items-center gap-2 font-bold">
+        <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+          <span className="flex shrink-0 items-center gap-2 font-bold">
             <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-sm text-white">F</span>
             <span className="hidden sm:inline">FirstIn</span>
           </span>
           {profile.status === "approved" && <Nav />}
-          <form action="/auth/signout" method="post" className="ms-auto">
+          <form action="/auth/signout" method="post" className="ms-auto shrink-0">
             <button className="rounded-lg px-2 py-1 text-sm text-muted hover:text-text">Sign out</button>
           </form>
         </div>

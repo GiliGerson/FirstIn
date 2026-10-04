@@ -11,13 +11,13 @@ export default function DemoLayout({ children }: LayoutProps<"/demo">) {
         <Link href="/signup" className="underline underline-offset-2">Create your own account →</Link>
       </div>
       <header className="sticky top-0 z-20 border-b border-border bg-surface/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
-          <Link href="/" className="flex items-center gap-2 font-bold">
+        <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+          <Link href="/" className="flex shrink-0 items-center gap-2 font-bold">
             <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-sm text-white">F</span>
             <span className="hidden sm:inline">FirstIn</span>
           </Link>
           <DemoTabs />
-          <Link href="/signup" className="ms-auto rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-white hover:opacity-90">
+          <Link href="/signup" className="ms-auto hidden shrink-0 rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-white hover:opacity-90 sm:block">
             Get started
           </Link>
         </div>
