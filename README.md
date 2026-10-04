@@ -61,6 +61,13 @@ so you can be among the first to apply. A web dashboard keeps every job and appl
 - Instant alerts for recruiter emails and application updates.
 - Write **"סיכום"** or `/summary` to the bot for a summary of the day so far.
 
+**Multi-user**
+- Anyone can sign up: a 4-step onboarding (studies, roles in priority order, job types, days a week,
+  cities, hybrid/remote) and a one-tap Telegram connection.
+- The owner approves each new account from Telegram. Jobs are collected once and shared; scores,
+  states, applications and alerts are per user, isolated with Row Level Security.
+- Per-user daily scoring quota keeps API costs predictable.
+
 **Dashboard (Next.js)**
 - Job feed with search, score slider and filters (category, startup / enterprise, source,
   not applied, last 24 hours), expandable reasons, and the same actions as in Telegram.
@@ -91,7 +98,8 @@ FirstIn/
 │   ├── scheduler.py        # the timetable (APScheduler) + Telegram listener
 │   ├── run_gmail.py · run_ats.py · run_discovery.py · run_notify.py · rescore.py
 │   └── settings.py · db.py · config.py · health.py · models.py
-├── dashboard/              # Next.js 16 + Tailwind web app
+├── dashboard/              # Next.js 16 + Tailwind web app (landing page, demo, onboarding, dashboard)
+├── docs/screenshots/       # README images (fictional sample data)
 ├── db/
 │   ├── schema.sql          # Supabase / Postgres schema
 │   └── migrations/         # e.g. 001_dashboard_access.sql (RLS for the dashboard)
