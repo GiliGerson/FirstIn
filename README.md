@@ -16,23 +16,23 @@ so you can be among the first to apply. A web dashboard keeps every job and appl
 
 ## Screenshots
 
-> Sample data — every company and job below is fictional.
+> Sample data — every company and job below is fictional. **Click any screenshot to open it in the [live demo](https://firstin-three.vercel.app/demo).**
 
 **Job feed** — every match ranked against your profile, with reasons and red flags
-![Job feed](docs/screenshots/job-feed.png)
+[![Job feed](docs/screenshots/job-feed.png)](https://firstin-three.vercel.app/demo)
 
 **Application tracking** — from applied to offer, updated automatically from email
-![Application pipeline](docs/screenshots/applications.png)
+[![Application pipeline](docs/screenshots/applications.png)](https://firstin-three.vercel.app/demo/applications)
 
 <table>
 <tr>
-<td width="60%"><b>Telegram alerts</b> — instant matches, application updates and a daily digest<br><img src="docs/screenshots/telegram-alerts.png" alt="Telegram alerts"></td>
-<td width="40%"><b>On your phone</b><br><img src="docs/screenshots/mobile-job-feed.png" alt="Mobile job feed"></td>
+<td width="60%"><b>Telegram alerts</b> — instant matches, application updates and a daily digest<br><a href="https://firstin-three.vercel.app/demo/alerts"><img src="docs/screenshots/telegram-alerts.png" alt="Telegram alerts"></a></td>
+<td width="40%"><b>On your phone</b><br><a href="https://firstin-three.vercel.app/demo"><img src="docs/screenshots/mobile-job-feed.png" alt="Mobile job feed"></a></td>
 </tr>
 </table>
 
 **Landing page**
-![Landing page](docs/screenshots/landing.png)
+[![Landing page](docs/screenshots/landing.png)](https://firstin-three.vercel.app)
 
 ---
 
