@@ -2,7 +2,8 @@
 
 **A personal job-search agent for student, part-time and internship tech roles in Israel.**
 
-🌐 **Live site:** [firstin-three.vercel.app](https://firstin-three.vercel.app)
+🌐 **Live site:** [firstin-three.vercel.app](https://firstin-three.vercel.app) ·
+🎮 **Live demo (no sign-up):** [firstin-three.vercel.app/demo](https://firstin-three.vercel.app/demo)
 
 FirstIn continuously scans company career sites, LinkedIn job alerts and your inbox, filters and
 ranks every job against your profile with Claude, and sends the good ones straight to Telegram —
@@ -10,6 +11,28 @@ so you can be among the first to apply. A web dashboard keeps every job and appl
 
 > Student jobs in tech close fast — sometimes within days — and they are scattered across LinkedIn,
 > dozens of applicant-tracking systems and email. FirstIn collects them into one ranked feed.
+
+---
+
+## Screenshots
+
+> Sample data — every company and job below is fictional.
+
+**Job feed** — every match ranked against your profile, with reasons and red flags
+![Job feed](docs/screenshots/job-feed.png)
+
+**Application tracking** — from applied to offer, updated automatically from email
+![Application pipeline](docs/screenshots/applications.png)
+
+<table>
+<tr>
+<td width="60%"><b>Telegram alerts</b> — instant matches, application updates and a daily digest<br><img src="docs/screenshots/telegram-alerts.png" alt="Telegram alerts"></td>
+<td width="40%"><b>On your phone</b><br><img src="docs/screenshots/mobile-job-feed.png" alt="Mobile job feed"></td>
+</tr>
+</table>
+
+**Landing page**
+![Landing page](docs/screenshots/landing.png)
 
 ---
 
