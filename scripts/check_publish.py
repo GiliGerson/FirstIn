@@ -19,8 +19,8 @@ ROOT = Path(__file__).resolve().parent.parent
 BLOCKLIST = ROOT / "config" / "publish_blocklist.txt"
 ENV_FILES = [ROOT / ".env", ROOT / "dashboard" / ".env.local"]
 MIN_VALUE_LEN = 6
-# Values that are fine to appear in code (defaults shown in .env.example)
-ALLOWED_VALUES = {"config/credentials.json", "config/token.json"}
+# .env entries that are public by design (the live site's address, default file paths)
+PUBLIC_KEYS = {"DASHBOARD_URL", "GMAIL_CREDENTIALS_PATH", "GMAIL_TOKEN_PATH"}
 SECRET_PATTERNS = [
     re.compile(r"sk-ant-[A-Za-z0-9_-]{20,}"),
     re.compile(r"sb_(?:secret|publishable)_[A-Za-z0-9_-]{16,}"),
@@ -39,8 +39,9 @@ def env_values() -> list[str]:
             continue
         for line in path.read_text(encoding="utf-8").splitlines():
             if "=" in line and not line.lstrip().startswith("#"):
-                value = line.split("=", 1)[1].strip().strip("\"'")
-                if len(value) >= MIN_VALUE_LEN and value not in ALLOWED_VALUES:
+                key, value = line.split("=", 1)
+                value = value.strip().strip("\"'")
+                if len(value) >= MIN_VALUE_LEN and key.strip() not in PUBLIC_KEYS:
                     values.append(value)
     return values
 

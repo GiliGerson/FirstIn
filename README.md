@@ -2,6 +2,8 @@
 
 **A personal job-search agent for student, part-time and internship tech roles in Israel.**
 
+🌐 **Live site:** [firstin-three.vercel.app](https://firstin-three.vercel.app)
+
 FirstIn continuously scans company career sites, LinkedIn job alerts and your inbox, filters and
 ranks every job against your profile with Claude, and sends the good ones straight to Telegram —
 so you can be among the first to apply. A web dashboard keeps every job and application in one place.
