@@ -1,0 +1,28 @@
+# Seed ראשוני של חברות. הרשימה תגדל לבד (Company Auto-Discovery, סעיף 6.1.1).
+# ats: greenhouse | lever | ashby | comeet | smartrecruiters | workday | unknown
+# ats_token: המזהה של החברה ב-ATS (ה-ATS Detector ימלא לבד אם חסר)
+# kind: startup | enterprise      priority: favorite | normal | blocked
+
+companies:
+  - name: Example Startup
+    website: https://example-startup.com
+    careers_url: https://boards.greenhouse.io/examplestartup
+    ats: greenhouse
+    ats_token: examplestartup
+    kind: startup
+    priority: favorite
+
+  - name: Example Israeli Co
+    website: https://example.co.il
+    careers_url: https://www.comeet.com/jobs/example/XX.XXX
+    ats: comeet
+    kind: startup
+    priority: normal
+
+  - name: Example Enterprise
+    website: https://example-enterprise.com
+    careers_url: https://jobs.lever.co/exampleenterprise
+    ats: lever
+    ats_token: exampleenterprise
+    kind: enterprise
+    priority: normal

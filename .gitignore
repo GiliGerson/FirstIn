@@ -1,0 +1,87 @@
+# ============================================================
+# Secrets — never commit
+# ============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Google OAuth client + tokens (anywhere in the repo)
+credentials.json
+credentials*.json
+client_secret*.json
+token.json
+token*.json
+*.token
+*_token.json
+service-account*.json
+
+# ============================================================
+# Personal config & data — only *.example.* files are committed
+# (profile, CV, highlights, company list, settings)
+# ============================================================
+config/*
+!config/*.example.*
+*.pdf
+cv.*
+highlights.md
+
+# Local data that may contain jobs, emails or personal info
+data/
+output/
+exports/
+*.csv
+*.xlsx
+*.jsonl
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.dump
+*.backup
+
+# ============================================================
+# Logs
+# ============================================================
+logs/
+*.log
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ============================================================
+# Node / dashboard
+# ============================================================
+node_modules/
+.next/
+.vercel/
+*.tsbuildinfo
+
+# ============================================================
+# OS / editors / local tool settings
+# ============================================================
+.DS_Store
+.vscode/
+.idea/
+.claude/settings.local.json
+.vercel
+
+# ============================================================
+# Personal working docs (product notes, assistant instructions) — kept local only
+# ============================================================
+/PRD.md
+/CLAUDE.md
+
+# Supabase CLI local state (project ref etc.)
+supabase/.temp/

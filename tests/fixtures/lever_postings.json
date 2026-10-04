@@ -1,0 +1,10 @@
+[
+  {"id": "aaa-1", "text": "Data Analyst Intern", "hostedUrl": "https://jobs.lever.co/acme/aaa-1", "country": "IL",
+   "createdAt": 1759219200000, "workplaceType": "hybrid",
+   "categories": {"commitment": "Internship", "location": "Herzliya", "allLocations": ["Herzliya"], "team": "Data"},
+   "descriptionPlain": "Analyze data.", "additionalPlain": "Equal opportunity."},
+  {"id": "bbb-2", "text": "Android Engineer", "hostedUrl": "https://jobs.lever.co/acme/bbb-2", "country": "GB",
+   "createdAt": 1759219200000, "workplaceType": "onsite",
+   "categories": {"commitment": "Permanent", "location": "London", "allLocations": ["London"]},
+   "descriptionPlain": "Build apps."}
+]

@@ -1,0 +1,9 @@
+{"jobs": [
+  {"id": 111, "title": " Software Engineering Student ", "absolute_url": "https://boards.greenhouse.io/acme/jobs/111",
+   "location": {"name": "Tel Aviv"}, "offices": [{"name": "Israel"}], "company_name": "Acme, Inc.",
+   "first_published": "2026-09-20T10:00:00-04:00", "updated_at": "2026-09-29T10:00:00-04:00",
+   "content": "&lt;p&gt;Join our &lt;strong&gt;R&amp;amp;D&lt;/strong&gt; team&lt;/p&gt;"},
+  {"id": 222, "title": "Account Executive", "absolute_url": "https://boards.greenhouse.io/acme/jobs/222",
+   "location": {"name": "Chicago, Illinois"}, "offices": [{"name": "USA - Remote"}], "company_name": "Acme, Inc.",
+   "first_published": null, "updated_at": "2026-09-29T10:00:00-04:00", "content": ""}
+], "meta": {"total": 2}}

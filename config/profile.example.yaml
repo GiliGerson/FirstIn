@@ -1,0 +1,21 @@
+# Seed ראשוני בלבד — אחרי ההקמה ההגדרות נערכות מהדשבורד/טלגרם (FR10).
+# העתיקי ל-profile.yaml ומלאי את הפרטים שלך.
+name: Your Name
+education: B.Sc. Computer Science, Your University
+year: 1
+target_roles:            # לפי סדר עדיפות
+  - Software Developer / Student Developer
+  - AI Engineer / Forward Deployed Engineer (FDE)
+  - Product (Product Analyst / Student PM)
+open_to: other tech roles
+job_types: [student, part-time, internship]
+locations:
+  - Tel Aviv
+  - Herzliya
+  - Ramat Gan
+accept_hybrid: true
+accept_remote: true
+max_days_per_week: 3
+languages: [Hebrew, English]
+cv_path: config/cv.pdf
+highlights_path: config/highlights.md

@@ -1,0 +1,13 @@
+{"apiVersion": "1", "jobs": [
+  {"id": "u-1", "title": "AI Engineer (Student)", "location": "Remote", "employmentType": "PartTime",
+   "secondaryLocations": [{"location": "Tel Aviv", "address": {"postalAddress": {"addressCountry": "Israel"}}}],
+   "address": {"postalAddress": {"addressCountry": "USA"}}, "isListed": true, "workplaceType": "Remote",
+   "publishedAt": "2026-09-01T12:00:00.000+00:00", "jobUrl": "https://jobs.ashbyhq.com/acme/u-1",
+   "descriptionPlain": "LLM work."},
+  {"id": "u-2", "title": "Hidden Role", "location": "Tel Aviv", "isListed": false,
+   "jobUrl": "https://jobs.ashbyhq.com/acme/u-2", "descriptionPlain": ""},
+  {"id": "u-3", "title": "Security Engineer", "location": "New York, NY", "employmentType": "FullTime",
+   "address": {"postalAddress": {"addressCountry": "USA"}}, "isListed": true,
+   "publishedAt": "2026-04-07T17:12:35.753+00:00", "jobUrl": "https://jobs.ashbyhq.com/acme/u-3",
+   "descriptionPlain": "Secure things."}
+]}

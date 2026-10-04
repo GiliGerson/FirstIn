@@ -1,0 +1,57 @@
+# Seed ראשוני להגדרות המערכת. אחרי ההקמה — נערך מהדשבורד (טבלת search_settings).
+
+notifications:
+  channel: telegram            # telegram בלבד כרגע
+  instant_threshold: 75        # ציון ≥ 75 → התראה מיידית
+  digest_threshold: 50         # 50–74 → סיכום יומי; < 50 → דשבורד בלבד
+  digest_time: "20:00"
+  quiet_hours:
+    start: "23:00"
+    end: "08:00"
+    override_score: 90         # ציון ≥ 90 מתריע גם בשעות שקט
+  timezone: Asia/Jerusalem
+
+linkedin:
+  modes: [email, public_scrape]   # logged_in לא ממומש ולא יתמומש
+  public_scrape:
+    interval_hours: 3
+    min_delay_seconds: 8
+    max_delay_seconds: 25
+    max_consecutive_failures: 3   # אחרי 3 כישלונות → השבתה + התראה בטלגרם
+    queries:
+      - "student software developer Israel"
+      - "student AI engineer Israel"
+      - "intern software Israel"
+      - "part-time developer Israel"
+      - "student product analyst Israel"
+
+scan_intervals_minutes:
+  gmail: 15
+  ats_favorite: 60
+  ats_active: 180                 # חברות שפרסמו בעבר משרת סטודנט
+  ats_default: 1440
+  job_boards: 180
+
+sources:
+  gmail: true
+  greenhouse: true
+  lever: true
+  ashby: true
+  comeet: true
+  smartrecruiters: false          # שלב 4
+  workday: false                  # שלב 4
+  linkedin_public: false          # שלב 4
+  job_boards: false               # שלב 4
+
+llm:
+  classify_model: claude-haiku-4-5
+  writing_model: claude-sonnet-5-5
+
+rule_filter:
+  include_keywords: [student, סטודנט, סטודנטית, intern, internship, part-time, "part time", חלקית, "משרה חלקית"]
+  exclude_keywords: [senior, lead, manager, principal, staff, director]
+  exclude_min_years: 3            # "X+ years" כש-X ≥ 3 → נפסל
+
+email:
+  # Extra senders whose mail is always job-related, e.g. your university's career center
+  extra_known_senders: [career.your-university.ac.il]
