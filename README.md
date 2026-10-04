@@ -5,10 +5,6 @@
 🌐 **Live site:** [firstin-three.vercel.app](https://firstin-three.vercel.app) ·
 🎮 **Live demo (no sign-up):** [firstin-three.vercel.app/demo](https://firstin-three.vercel.app/demo)
 
-![FirstIn landing page: ranked student tech jobs sent to Telegram](docs/landing.png)
-
-![FirstIn dashboard demo with sample data: jobs ranked by match score, with apply / save / hide actions](docs/demo.png)
-
 FirstIn continuously scans company career sites, LinkedIn job alerts and your inbox, filters and
 ranks every job against your profile with Claude, and sends the good ones straight to Telegram —
 so you can be among the first to apply. A web dashboard keeps every job and application in one place.
