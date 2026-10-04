@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 // Reachable without signing in. /reset-password is not: the email link signs the user in first.
-const PUBLIC_PATHS = ["/", "/login", "/signup", "/forgot-password", "/auth/confirm"];
+const PUBLIC_PATHS = ["/", "/demo", "/login", "/signup", "/forgot-password", "/auth/confirm"];
 // Pages a signed-in user doesn't need — they go straight to the dashboard
 const SIGNED_OUT_ONLY = ["/", "/login", "/signup", "/forgot-password"];
 

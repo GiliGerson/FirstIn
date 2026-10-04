@@ -36,6 +36,7 @@ export default function LandingPage() {
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-bold text-white">F</span>
         <span className="text-lg font-bold">FirstIn</span>
         <nav className="ms-auto flex items-center gap-2">
+          <Link href="/demo" className="rounded-lg px-3 py-1.5 text-sm font-medium text-muted hover:text-text">Demo</Link>
           <Link href="/login" className="rounded-lg px-3 py-1.5 text-sm font-medium text-muted hover:text-text">Sign in</Link>
           <Link href="/signup" className="rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-white hover:opacity-90">
             Get started
@@ -60,8 +61,8 @@ export default function LandingPage() {
               <Link href="/signup" className="rounded-xl bg-accent px-6 py-3 font-semibold text-white shadow-sm hover:opacity-90">
                 Get started — it&apos;s free
               </Link>
-              <Link href="/login" className="rounded-xl border border-border bg-surface px-6 py-3 font-semibold hover:border-accent">
-                Sign in
+              <Link href="/demo" className="rounded-xl border border-border bg-surface px-6 py-3 font-semibold hover:border-accent">
+                See a live demo
               </Link>
             </div>
           </div>

@@ -20,7 +20,8 @@ function daysSince(iso: string, now: number) {
   return Math.max(0, Math.floor((now - new Date(iso).getTime()) / DAY));
 }
 
-export default function PipelineBoard({ initialApps }: { initialApps: Application[] }) {
+/** `demo`: changes only update the screen (public /demo page, sample data). */
+export default function PipelineBoard({ initialApps, demo = false }: { initialApps: Application[]; demo?: boolean }) {
   const [apps, setApps] = useState(initialApps);
   const [openId, setOpenId] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -37,6 +38,7 @@ export default function PipelineBoard({ initialApps }: { initialApps: Applicatio
     };
     setError(null);
     setApps((list) => list.map((a) => (a.id === app.id ? { ...a, stage: to, events: [...a.events, event] } : a)));
+    if (demo) return;
     try {
       await setApplicationStage(supabase, app.id, app.stage, to);
     } catch (e) {
@@ -48,6 +50,7 @@ export default function PipelineBoard({ initialApps }: { initialApps: Applicatio
   async function save(app: Application, fields: Partial<ApplicationFields>) {
     setError(null);
     setApps((list) => list.map((a) => (a.id === app.id ? { ...a, ...fields } : a)));
+    if (demo) return;
     try {
       await updateApplication(supabase, app.id, fields);
     } catch (e) {

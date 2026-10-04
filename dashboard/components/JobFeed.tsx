@@ -55,7 +55,8 @@ function link(job: Job): string | null {
   return safeUrl(job.canonical_url) || safeUrl(job.url);
 }
 
-export default function JobFeed({ initialJobs }: { initialJobs: Job[] }) {
+/** `demo`: actions only change what's on screen (public /demo page, sample data). */
+export default function JobFeed({ initialJobs, demo = false }: { initialJobs: Job[]; demo?: boolean }) {
   const [jobs, setJobs] = useState(initialJobs);
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   const [expanded, setExpanded] = useState<number | null>(null);
@@ -108,6 +109,7 @@ export default function JobFeed({ initialJobs }: { initialJobs: Job[] }) {
     setError(null);
     setAskReason(null);
     setJobs((list) => list.map((j) => (j.id === job.id ? { ...j, user_state: state, not_relevant_reason: reason } : j)));
+    if (demo) return;
     try {
       await setJobState(supabase, job.id, state, reason);
     } catch (e) {
