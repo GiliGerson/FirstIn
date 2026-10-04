@@ -4,6 +4,17 @@ normalizes, de-duplicates, filters and scores them."""
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional
+from urllib.parse import urlsplit
+
+
+def safe_url(url: Optional[str]) -> Optional[str]:
+    """Keep only plain http(s) links — job links come from outside sources and end up as
+    clickable links in Telegram and the dashboard (no javascript:/data: URLs)."""
+    if not url:
+        return None
+    url = url.strip()
+    parts = urlsplit(url)
+    return url if parts.scheme in ("http", "https") and parts.netloc else None
 
 
 @dataclass

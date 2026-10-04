@@ -18,7 +18,7 @@ from postgrest.exceptions import APIError
 from worker import db, settings as settings_mod
 from worker.discovery import companies as companies_repo
 from worker.discovery.finder import NAME_NOISE, core_name
-from worker.models import RawJob
+from worker.models import RawJob, safe_url
 from worker.pipeline.filter import RuleFilter
 from worker.pipeline.normalize import normalize_location, normalize_title, workplace_flags
 
@@ -126,6 +126,7 @@ def _ingest(raw_jobs: list[RawJob]) -> IngestReport:
     batch_urls: set = set()
 
     for raw in raw_jobs:
+        raw.url, raw.canonical_url = safe_url(raw.url), safe_url(raw.canonical_url)
         verdict = rule_filter.check(raw)
         if not verdict.passed:
             report.rejected[verdict.reason] += 1

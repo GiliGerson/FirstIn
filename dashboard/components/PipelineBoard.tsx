@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { setApplicationStage, updateApplication } from "@/lib/actions";
 import { CLOSED_STAGES, STAGES, STAGE_LABEL, formatDate, timeAgo } from "@/lib/labels";
 import { pipelineStats } from "@/lib/pipelineStats";
+import { safeUrl } from "@/lib/safeUrl";
 import { createClient } from "@/lib/supabase/client";
 import type { Application, ApplicationFields, Stage } from "@/lib/types";
 
@@ -154,7 +155,7 @@ function ApplicationPanel({ app, now, onClose, onMove, onSave }: {
   const [contactName, setContactName] = useState(app.contact_name ?? "");
   const [contactEmail, setContactEmail] = useState(app.contact_email ?? "");
   const [followup, setFollowup] = useState(app.next_followup_at?.slice(0, 10) ?? "");
-  const link = app.jobs?.canonical_url || app.jobs?.url;
+  const link = safeUrl(app.jobs?.canonical_url) || safeUrl(app.jobs?.url);
   const history = [...app.events].sort((a, b) => a.occurred_at.localeCompare(b.occurred_at));
 
   function saveDetails() {

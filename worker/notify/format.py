@@ -1,5 +1,6 @@
 """Hebrew message formatting for job alerts, digests and email alerts."""
 
+from worker.models import safe_url
 from worker.notify.telegram import esc
 
 SOURCE_NAMES = {
@@ -23,7 +24,7 @@ NOT_RELEVANT_REASONS = {
 
 def job_link(job: dict) -> str | None:
     """Short public link: LinkedIn alert URLs carry long tracking parameters."""
-    return job.get("canonical_url") or job.get("url")
+    return safe_url(job.get("canonical_url")) or safe_url(job.get("url"))
 
 
 def score_badge(score: int | None) -> str:

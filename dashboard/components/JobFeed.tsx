@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { setJobState } from "@/lib/actions";
 import { JOB_TYPE_LABEL, NOT_RELEVANT_REASONS, SOURCE_NAMES, STATE_LABEL, scoreTone, timeAgo } from "@/lib/labels";
+import { safeUrl } from "@/lib/safeUrl";
 import { createClient } from "@/lib/supabase/client";
 import type { Job, UserState } from "@/lib/types";
 
@@ -51,7 +52,7 @@ function workplace(job: Job): string {
 }
 
 function link(job: Job): string | null {
-  return job.canonical_url || job.url;
+  return safeUrl(job.canonical_url) || safeUrl(job.url);
 }
 
 export default function JobFeed({ initialJobs }: { initialJobs: Job[] }) {

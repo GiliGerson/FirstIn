@@ -1,11 +1,12 @@
-# Worker dependencies (Python 3.12). Install: .venv/bin/pip install -r requirements.txt
-anthropic
-apscheduler
-beautifulsoup4
-google-api-python-client
-google-auth-httplib2
-google-auth-oauthlib
-httpx
-python-dotenv
-pyyaml
-supabase
+# Worker dependencies (Python 3.12), pinned to audited versions (pip-audit: no known vulnerabilities).
+# Install: .venv/bin/pip install -r requirements.txt
+anthropic==1.9.0
+APScheduler==3.11.3
+beautifulsoup4==4.15.0
+google-api-python-client==2.200.0
+google-auth-httplib2==0.4.3
+google-auth-oauthlib==1.5.0
+httpx==0.28.1
+python-dotenv==1.2.3
+PyYAML==6.0.3
+supabase==2.31.0
