@@ -37,6 +37,8 @@ health = HealthMonitor()
 
 
 def job_gmail() -> None:
+    if not users.owner().gmail_enabled:
+        return   # Gmail access turned off (profiles.gmail_enabled) — don't try, don't alert
     since = run_gmail.resolve_since(None)
     result = run_gmail.run(since)
     report = result.ingest_report
